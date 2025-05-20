@@ -1,0 +1,8 @@
+steps:
+- name: 'gcr.io/cloud-builders/docker'
+  args: ['build', '-t', 'us-central1-docker.pkg.dev/friendly-vigil-460013-i8/my-repo/flask-app', '.']
+- name: 'gcr.io/cloud-builders/docker'
+  args: ['push', 'us-central1-docker.pkg.dev/friendly-vigil-460013-i8/my-repo/flask-app']
+
+images:
+- 'us-central1-docker.pkg.dev/friendly-vigil-460013-i8/my-repo/flask-app'
